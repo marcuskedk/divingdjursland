@@ -1,4 +1,4 @@
-@import 'Extra';
+@import 'Extra', 'Variables';
 
 * {
   box-sizing: border-box;
@@ -8,4 +8,14 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: $montserrat;
+}
+
+.rsis-container div {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.rsis-image, .slider div:first-child, .slider:nth-child(2) {
+  width: 100% !important;
 }
