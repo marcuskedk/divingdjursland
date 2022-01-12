@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
+ 
 }
 
 body {
@@ -11,6 +13,154 @@ body {
   font-family: $montserrat;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2552525;
+  .top {
+    background-color: $aliceblue;
+    .logo {
+     
+      width: 100%;
+      display: flex;
+      
+      .title {
+        margin: auto;
+
+        color: $tuftsblue;
+        font-size: 6vw;
+        font-weight: bold;
+        text-shadow: 3px 3px 3px rgba(109, 108, 108, 0.308);
+    
+      }
+    }
+
+
+
+  }
+  .bottom {
+    background-color: $tuftsblue;
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      list-style: none;
+      li {
+        padding: 1rem;
+        .active{
+          color: $midnightblue;
+        }
+        a {
+          text-decoration: none;
+          color: $white;
+          font-weight: 600;
+          font-size: 1.3vw;
+          margin-right: 2em;
+        }
+        a:hover{
+          color:$midnightblue;
+         
+          transition: linear 0.5s;
+
+        }
+      }
+      li:first-child {
+        padding: 1rem 1rem 1rem 0;
+      }
+      li:last-child {
+        padding: 1rem 0 1rem 1rem;
+      }
+    }
+  }
+  .bottom-fixed {
+    position: fixed;
+    top: 0;
+    transition: .5s;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.AppSection {
+  padding-top: 173px;
+}
+
+section {
+  padding: 3rem 0;
+
+.card{
+  display: block;
+  box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
+  
+  img{
+    box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
+  }
+
+
+  h3{
+    background-color: $tuftsblue ;
+    padding: 0.5em;
+    color: $white;
+    margin:0;
+  }
+  span{
+    float: right;
+  }
+
+  
+}
+
+.card:hover{
+
+  h3{
+    transition: linear 0.5s;
+    color:$midnightblue;
+  }
+}
+
+ .secTwo{
+   margin-top: 2em;
+   padding: 1em;
+   box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
+   
+
+   
+
+   .vid{
+     box-shadow: 5px 5px 5px rgba(29, 28, 28, 0.267);
+     border-radius: 0.2em;
+     
+   }
+
+   h3{
+     font-size: 2vw;
+     margin: 0;
+   }
+   p{
+     font-weight: 500;
+   }
+ }
+
+}
+
+footer {
+  background-color: $aliceblue;
+  .top {
+    padding: 1rem 0;
+  }
+  .bottom {
+    .container {
+      border-top: 1px solid rgb(173, 173, 173);
+    }
+  }
+}
+
+.slider {
+  z-index: 0;
+}
+
 .rsis-container div {
   background-size: cover !important;
   background-position: center !important;
@@ -18,4 +168,30 @@ body {
 
 .rsis-image, .slider div:first-child, .slider:nth-child(2) {
   width: 100% !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.info{
+  display: flex;
+
+  .infoCard{
+    background-color: $white;
+    box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
+
+    margin: 1em 0;
+    padding: 1em;
+
+    h3{
+      margin: 0;
+    }
+   
+   
+  }
 }

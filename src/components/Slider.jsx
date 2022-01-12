@@ -13,17 +13,19 @@ const images = [
 const Slider = () => {
     return (
         <>
-            <SimpleImageSlider
-                width={1000}
-                height={504}
-                images={images}
-                showBullets={false}
-                showNavs={true}
-                loop={true}
-                autoPlay={true}
-                autoPlayDelay={6}
-                slideDuration={1}
-            />
+            <div className="slider">
+                <SimpleImageSlider
+                    width="100%"
+                    height={504}
+                    images={images}
+                    showBullets={false}
+                    showNavs={true}
+                    loop={true}
+                    autoPlay={true}
+                    autoPlayDelay={6}
+                    slideDuration={1} 
+                />
+            </div>
         </>
     )
 }
