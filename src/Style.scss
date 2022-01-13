@@ -181,17 +181,28 @@ footer {
 .info{
   display: flex;
 
+  .info_menu{
+    box-shadow: 0px 0px 15px black ;
+    position: relative;
+  }
+  
   .infoCard{
     background-color: $white;
     box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
-
+    
     margin: 1em 0;
     padding: 1em;
-
+    
     h3{
       margin: 0;
     }
-   
-   
+    
+    
+    
+  }
+  .sticky {
+    top: 100px;
+    position: sticky;
+    
   }
 }

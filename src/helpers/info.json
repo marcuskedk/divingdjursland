@@ -6,7 +6,8 @@
             "text1": "Alle med et gyldigt dykkercertifikat kan deltage dog skal du informere guiden, hvis det er længere tid side du har dykket eller har brug for hjælp til at komme i gang igen. ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect1"
         },
 
         {
@@ -15,7 +16,8 @@
             "text1": "Det eneste du skal medbringe er håndklæde, badetøj, mad og drikke samt godt humør. Har du en dykkermaske eller lignende du er glad for at bruge, må du selvfølgelig gerne tage den med.  ",
             "text2": "Du må også gerne medbringe kamera på dykkerturen men husk stadig at holde øje med resten af gruppen så du ikke bliver væk. ",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect2"
         },
         {
             "id": 3,
@@ -23,7 +25,8 @@
             "text1": "Alle deltagere er uddannede dykkere og har derved selv ansvaret for at dykke inden for gældende regler. Vi dykker alle med en guid eller en makker. Som certificeret dykker skal du selv sørge for forsikring, de fleste ulykkesforsikringer dækker dykning men ellers kan jeg anbefale at se på DAN Europ eller melde sig ind i en dykkerklub der tilbyder forsikring gennem DSF.  ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect3"
         },
         {
             "id": 4,
@@ -31,7 +34,8 @@
             "text1": "Vores guider er lokalkendte og har flere års erfaring med dykning omkring Djursland. Vi har en lang række kendte dykkersteder som vi gør brug af – du kan se nogle af dem under steder i menuen. På grund af vejret bliver dykkerstedet typisk først valgt dagen før en tur, bliver afholdt det er for at sikre så optimale forhold som muligt under dykket.   ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect4"
         },
 
         {
@@ -40,7 +44,8 @@
             "text1": "Alle vores guider er som minimum uddannet Instruktør eller Dive Master og har mange års erfaring med dykning samt et godt lokalt kendskab.  ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect5"
         },
 
         {
@@ -49,7 +54,8 @@
             "text1": "Du har flere muligheder for at tilmelde dig. Du kan gøre det her på siden under Tilmelding i menuen eller under hver tur under menupunktet Ture.   ",
             "text2": "Du har også mulighed for at sende en e-mail, SMS eller ringe hvis du har yderligere spørgsmål. Vi kan kontaktes på e-mail: contact@scubafun.dk eller sms/telefon +45 42 78 96 05. ",
             "text3": "Selvom du har sendt din tilmelding er den først booket når vi har registreret din betaling. ",
-            "text4": "Betaling kan ske via MobilePay på 56 30 30 eller på linket til vores Web Shop som du finder her: Betaling via Web Shop. "
+            "text4": "Betaling kan ske via MobilePay på 56 30 30 eller på linket til vores Web Shop som du finder her: Betaling via Web Shop. ",
+            "link": "redirect6"
         },
         {
             "id": 7,
@@ -57,7 +63,8 @@
             "text1": "Alt vores udstyr er af nyere dato og lejer ikke noget ud som vi ikke selv ville dykke med.  ",
             "text2": "Et standart sæt ved os består af en 6/10 mm våddragt, vinge med blylommer, 12L tank, regulatorsæt, bly, 6mm sko, 5 mm handsker, finner og maske. ",
             "text3": "Vil du heller dykke med en BCD, en støre eller mindre flaske så spørg endelig. ",
-            "text4": ""
+            "text4": "",
+            "link": "redirect7"
         },
 
         {
@@ -66,7 +73,8 @@
             "text1": "Der er altid udstyrsleje med i prisen på vires ture men har vi ikke lige en dato der passer så er det også muligt at komme forbi vores adresse og leje et komplet sæt udstyr og så tage af sted på egen hånd. Prisen for et komplet sæt er 350kr. og 250kr. for en scuba enhed. Det er muligt at leje en ekstra tank for 100kr.  ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect8"
         },
 
         {
@@ -75,7 +83,8 @@
             "text1": "Betaling kan ske via MobilePay på 56 30 30 eller på linket til vores Web Shop som du finder her: Betaling via Web Shop.  ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect9"
         },
 
         {
@@ -84,7 +93,8 @@
             "text1": "På nogle af vores ture er der grill efterfølgende. Prisen vil på sådan en tur være 25 kr. højre for at dække dette. Der er ikke drikkevarer med i prisen.  ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect10"
         },
 
         {
@@ -93,7 +103,8 @@
             "text1": "Skulle du have yderlige spørgsmål er du meget velkommen til at kontakte os på sms/telefon +45 42 78 96 05 eller e-mail: contact@scubafun.dk.  ",
             "text2": "",
             "text3": "",
-            "text4": ""
+            "text4": "",
+            "link": "redirect11"
         }
         
         
