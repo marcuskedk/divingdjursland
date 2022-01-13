@@ -1,0 +1,16 @@
+{
+    "contact": [
+        {
+            "id": 1,
+            "title": "Spørgsmål eller kommentarer kan rettes til:",
+            "navn": "ScubaFun",
+            "adresse": "Svinget 2 8570 Trustrup, Lyngby",
+            "mail": "contact@scubafun.dk",
+            "telefon": "+45 42789605",
+            "cvr": "CVR: 40091149",
+            "img": "../../img/IMG_20190806_093712.jpg"
+
+            
+        }
+    ]
+}

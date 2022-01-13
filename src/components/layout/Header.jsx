@@ -4,25 +4,6 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import navi from "../../helpers/navigation.json";
 
 const Header = () => {
-      
-    const [showHeader, setShowHeader] = useState(true);
-    const [scrollPos, setScrollPos] = useState(0);
-
-        const handleScroll = () => {
-            console.log("top", document.body.getBoundingClientRect().top);
-            console.log();
-            if (document.body.getBoundingClientRect().top < -116) {
-                setScrollPos(document.body.getBoundingClientRect().top);
-                setShowHeader(document.body.getBoundingClientRect().top > scrollPos);
-            }
-        };
-        useEffect(() => {
-            window.addEventListener("scroll", handleScroll);
-            return () => {
-                window.removeEventListener("scroll", handleScroll);
-            }; 
-        });
-
     return (
         <>
             <header>
@@ -34,7 +15,7 @@ const Header = () => {
                         </a>
                     </div>
                 </div>
-                <div className={`bottom ${showHeader ? "bottom-fixed" : ""}`}>
+                <div className="bottom">
                     <div className="container">
                         <ul>
                             {navi.navigation.map(( item, index ) => 

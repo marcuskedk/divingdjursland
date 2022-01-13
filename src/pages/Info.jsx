@@ -9,7 +9,7 @@ const Info = () => {
           <div className="sticky">
             <div className="info_menu">
               {info.praktisk.map((item, index) => (
-                <a href={"#" + info.praktisk[index].link}>
+                <a className="redirect_links" href={"#" + info.praktisk[index].link}>
                   {" "}
                   {info.praktisk[index].title}
                 </a>
@@ -18,7 +18,7 @@ const Info = () => {
           </div>
         </div>
 
-        <div className=" col-md-8">
+        <div className="col-md-8">
           {info.praktisk.map((item, index) => (
             <div className="infoCard" id={info.praktisk[index].link}>
               <h3>{info.praktisk[index].title}</h3>
