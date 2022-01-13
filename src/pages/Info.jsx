@@ -1,5 +1,6 @@
 import React from "react";
 import info from "../helpers/info.json";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 const Info = () => {
   return (
@@ -9,10 +10,7 @@ const Info = () => {
           <div className="sticky">
             <div className="info_menu">
               {info.praktisk.map((item, index) => (
-                <a className="redirect_links" href={"#" + info.praktisk[index].link}>
-                  {" "}
-                  {info.praktisk[index].title}
-                </a>
+                 <NavLink activeClassName="active" to={"#" + info.praktisk[index].link }>{ info.praktisk[index].title }</NavLink>
               ))}
             </div>
           </div>

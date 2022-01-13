@@ -12,13 +12,13 @@
         },
         {
             "id": 3,
-            "link": "/contact",
-            "title": "Contact"
+            "link": "/booking",
+            "title": "Booking"
         },
         {
             "id": 4,
-            "link": "/booking",
-            "title": "Booking"
+            "link": "/contact",
+            "title": "Contact"
         }
     ]
 }
