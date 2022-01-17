@@ -10,10 +10,11 @@ const Info = () => {
           <div className="sticky">
             <div className="info_menu">
               {info.praktisk.map((item, index) => (
-                 <NavLink activeClassName="active" to={"#" + info.praktisk[index].link }>{ info.praktisk[index].title }</NavLink>
+                <a activeClassName="active" href= {"#" + info.praktisk[index].link }>{ info.praktisk[index].title }</a>  
               ))}
             </div>
           </div>
+         
         </div>
 
         <div className="col-md-8">
