@@ -1,36 +1,25 @@
-// Import npm packages
-const express = require('express');
-const mongoose = require('mongoose');
-const morgan = require('morgan');
-const path = require('path');
+const express = require( 'express' );
+const mongoose = require( 'mongoose' );
+require( 'dotenv' ).config();
 
-const app = express();
-const PORT = process.env.PORT || 27017; // Step 1
+const server = express();
 
-const routes = require('./routes/api');
+server.use( express.json() );
+server.use( express.urlencoded() );
 
-// Step 2
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/divingdjursland', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+server.use( express.static( 'public' ) );
 
-mongoose.connection.on('connected', () => {
-    console.log('Mongoose is connected!!!!');
-});
+mongoose.connect( process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true } )
 
-// Data parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+.then( conn => console.log( "Der er hul igennem til DB - og følgende models: ", conn.models ))
+.catch( error => console.log( "Der er fejl med at forbinde til databasen", error ) )
 
-// Step 3
+const db = mongoose.connection;
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
+server.use( "/booking", require( "./routes/booking.routes" ) );
 
-// HTTP request logger
-app.use(morgan('tiny'));
-app.use('/api', routes);
+server.get( "/", async ( req, res ) => {
+    res.status( 200 ).json({ besked: "Her er serveren - velkommen til!" })
+})
 
-app.listen(PORT, console.log(`Server is starting at ${PORT}`));
+server.listen( process.env.PORT, () => console.log( "\{^_^}/ Serveren lytter nu til port: " + process.env.PORT ) )
