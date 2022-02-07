@@ -17,8 +17,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  .top {
-    background-color: $aliceblue;
+  
     .logo {
       width: 100%;
       display: flex;
@@ -26,17 +25,17 @@ header {
       .title {
         margin: auto;
 
-        color: $tuftsblue;
+        color: $navy;
         font-size: 70px;
         font-weight: bold;
         text-shadow: 3px 3px 3px rgba(109, 108, 108, 0.308);
       }
-    }
+    
   }
   .bottom {
     position: sticky;
     top: 0;
-    background-color: $tuftsblue;
+    
     z-index: 2552525;
     ul {
       padding: 0;
@@ -46,17 +45,17 @@ header {
       li {
         padding: 1rem;
         .active {
-          color: $midnightblue;
+          color: $orange;
         }
         a {
           text-decoration: none;
-          color: $white;
+          color: $navy;
           font-weight: 600;
           font-size: 20px;
           margin-right: 2em;
         }
         a:hover {
-          color: $midnightblue;
+          color: $orange;
 
           transition: linear 0.5s;
         }
@@ -94,7 +93,7 @@ section {
     }
 
     h3 {
-      background-color: $tuftsblue;
+      background-color: $navy;
       padding: 0.5em;
       color: $white;
       margin: 0;
@@ -107,7 +106,7 @@ section {
   .card:hover {
     h3 {
       transition: linear 0.5s;
-      color: $midnightblue;
+      color: $orange;
     }
   }
 
@@ -132,12 +131,23 @@ section {
 }
 
 footer {
-  background-color: $aliceblue;
+
+  color: orange;
+  
+  
+  
+  a{
+    color: orange;
+    text-decoration: none;
+  }
+
+  background-color: $navy;
   .top {
     padding: 1rem 0;
   }
   .bottom {
     .container {
+      
       border-top: 1px solid rgb(173, 173, 173);
     }
   }
@@ -213,6 +223,17 @@ footer {
   .top {
     .logo {
       justify-content: center;
+       
+img{
+  height: 1rem;
+  width: 1rem;
+  font-size: 1rem;
+  z-index: 400;
+  color: black;
+
+
+}
+
       .title {
         display: none;
       }

@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import Slider from '../components/Slider.jsx';
 import text from '../helpers/everything.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';  
 
 const Home = () => {
     return (
