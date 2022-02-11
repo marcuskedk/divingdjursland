@@ -17,14 +17,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-<<<<<<< Updated upstream
   
-=======
   z-index: 2552525;
-  height: 100vh;
-  .top {
-    background-color: $aliceblue;
->>>>>>> Stashed changes
     .logo {
       width: 100%;
       display: flex;
@@ -32,13 +26,8 @@ header {
       .title {
         margin: auto;
 
-<<<<<<< Updated upstream
         color: $navy;
         font-size: 70px;
-=======
-        color: $tuftsblue;
-        font-size: 60px;
->>>>>>> Stashed changes
         font-weight: bold;
         text-shadow: 3px 3px 3px rgba(109, 108, 108, 0.308);
       }
@@ -47,12 +36,8 @@ header {
   .bottom {
     position: sticky;
     top: 0;
-<<<<<<< Updated upstream
     
     z-index: 2552525;
-=======
-    background-color: $tuftsblue;
->>>>>>> Stashed changes
     ul {
       padding: 0;
       margin: 0;
@@ -243,7 +228,6 @@ textarea {
       margin: 0;
     }
   }
-<<<<<<< Updated upstream
   .sticky {
     top: 90px;
     position: sticky;
@@ -282,18 +266,6 @@ img{
 
 }
 
-=======
-}
-
-@media screen and (max-width: 992px)  {
-  .AppSection {
-    padding-top: 151px;
-  }
-  
-  .top {
-    .logo {
-      justify-content: center;
->>>>>>> Stashed changes
       .title {
         display: none;
       }
@@ -303,21 +275,13 @@ img{
     ul {
       justify-content: center;
       li {
-<<<<<<< Updated upstream
         a {
           margin: 0 !important;
           font-size: 16px !important;
-=======
-        text-align: center;
-        a {
-          font-size: 16px !important;
-          margin: 0 !important;
->>>>>>> Stashed changes
         }
       }
     }
   }
-<<<<<<< Updated upstream
 }
 
 .contact_img{
@@ -341,6 +305,3 @@ img{
   text-align: center;
 
 }
-=======
-}
->>>>>>> Stashed changes
