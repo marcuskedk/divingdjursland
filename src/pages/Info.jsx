@@ -10,7 +10,7 @@ const Info = () => {
           <div className="sticky">
             <div className="info_menu">
               {info.praktisk.map((item, index) => (
-                <a activeClassName="active" href= {"#" + info.praktisk[index].link }>{ info.praktisk[index].title }</a>  
+                <a className="redirect_links" href= {"#" + info.praktisk[index].link }>{ info.praktisk[index].title }</a>  
               ))}
             </div>
           </div>
