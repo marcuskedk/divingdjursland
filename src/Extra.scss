@@ -21,7 +21,7 @@
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
-  gap: 1rem !important;
+  // gap: 1rem !important;
 }
 
 .row > * {
@@ -480,10 +480,6 @@
 
 }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .gap-0 {
   gap: 0 !important;
 }
@@ -507,7 +503,6 @@
 .gap-5 {
   gap: 3rem !important;
 }
-<<<<<<< Updated upstream
 
 
 .justify-content-start {
@@ -533,5 +528,3 @@
 .justify-content-evenly {
   justify-content: space-evenly !important;
 }
-=======
->>>>>>> Stashed changes
