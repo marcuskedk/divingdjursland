@@ -265,8 +265,13 @@ textarea {
 .d-block {
   display: block;
 }
+
 .my-1 {
   margin: .25rem 0;
+}
+
+.my-3 {
+  margin: 1rem 0;
 }
 
 .btn-primary {
@@ -295,6 +300,30 @@ textarea {
 
 .position-relative {
   position: relative;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.form-control {
+   background-color: #ececec;
+   border: 1px solid rgb(0 0 0 / 23%);
+   color: #000;
+   border-radius: 5px;
+   padding: .5rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border: 1px solid #FF6911;
+  box-shadow: 0 0 2px #FF6911;
+}
+
+.form-control::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 992px) {

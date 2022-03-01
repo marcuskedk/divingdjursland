@@ -3,7 +3,7 @@ const router = express.Router();
 const BookingCategory = require( '../model/bookingCategory.model' );
 
 // GET
-router.get( "/category", async ( req, res) => {
+router.get( "/bookingcategory", async ( req, res) => {
     
     console.log( "GET Booking Kategori" );
 
@@ -18,7 +18,7 @@ router.get( "/category", async ( req, res) => {
 } )
 
 // POST
-router.post( "/category", async ( req, res) => {
+router.post( "/bookingcategory", async ( req, res) => {
     
     console.log( "POST Booking Kategori" );
 

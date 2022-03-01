@@ -5,7 +5,21 @@ const api = {
 }
 
 export const getBookingCategory = () => {
-    let endpoint = "category/";
+    let endpoint = "bookingcategory/";
+    let response = axios.get( api.baseUrl + endpoint)
+    .then(
+        // res => console.log( res )
+        res => { return res.data }
+    )
+    .catch( fejl => {
+        console.log( "Fejl", fejl)
+        return null;    
+    } )
+    return response;
+}
+
+export const getBooking = () => {
+    let endpoint = "booking/";
     let response = axios.get( api.baseUrl + endpoint)
     .then(
         // res => console.log( res )
