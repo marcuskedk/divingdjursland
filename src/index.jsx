@@ -1,11 +1,42 @@
-import * as React from "react";
+import React, { Suspense } from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from './App';
+import i18next from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import HttpApi from 'i18next-http-backend'
+import LanguageDetector from 'i18next-browser-languagedetector'
 
+i18next
+  .use(HttpApi)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    supportedLngs: ['da', 'en'],
+    fallbackLng: 'da',
+    debug: false,
+    // Options for language detector
+    detection: {
+      order: ['path', 'cookie', 'htmlTag'],
+      caches: ['cookie'],
+    },
+    // react: { useSuspense: false },
+    backend: {
+      loadPath: '/assets/locales/{{lng}}/translation.json',
+    },
+  })
+
+  const loadingMarkup = (
+    <div className="py-4 text-center">
+      <h3>Loading..</h3>
+    </div>
+  )
+  
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Suspense fallback={loadingMarkup}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Suspense>,
   document.getElementById('root')
 );

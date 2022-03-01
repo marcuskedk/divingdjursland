@@ -1,11 +1,14 @@
 import * as React from "react";
+import { useTranslation } from 'react-i18next'
 import * as ReactDOM from "react-dom";
 import Slider from '../components/Slider.jsx';
 import text from '../helpers/everything.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';  
+import i18next from 'i18next';
 
 const Home = () => {
+    const { t } = useTranslation()
     return (
         <>
             <Slider />
@@ -33,9 +36,9 @@ const Home = () => {
                     </div>
                     <div className="row secTwo">
                         <div className="col-md-6">
-                            <h3>{ text.MainText[0].title }</h3>
-                            <p>{ text.MainText[0].text1 }</p>
-                            <p>{ text.MainText[0].text2 }</p>
+                            <h3>{t('MainText.title')}</h3>
+                            <p>{t('MainText.text1')}</p>
+                            <p>{t('MainText.text2')}</p>
                         </div>
                         <div className="col-md-6">
                             <video className="vid" width="100%" autoplay="autoplay" loop="true" muted ><source src="../img/Henning_dykker_cuttet.mp4" type="video/mp4"/></video>

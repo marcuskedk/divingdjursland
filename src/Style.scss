@@ -1,4 +1,4 @@
-@import "Extra", "Variables";
+@import "Extra", "Variables", "Marcusl";
 
 * {
   box-sizing: border-box;
@@ -10,6 +10,17 @@ body {
   padding: 0;
   font-size: 16px;
   font-family: $montserrat;
+}
+
+header.fixed {
+  .bottom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: all .3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.534);
+  }
 }
 
 header {
@@ -38,6 +49,7 @@ header {
     top: 0;
     
     z-index: 2552525;
+    transition: all .3s;
     ul {
       padding: 0;
       margin: 0;
@@ -304,4 +316,49 @@ img{
 .contactImage {
   text-align: center;
 
+}
+
+.left-menu {
+  width: 100%;
+  justify-content: start;
+}
+
+.right-menu {
+  width: 100%;
+  justify-content: end;
+}
+
+.menu-flex {
+  display: flex;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  .dropdown-link {
+    cursor: pointer;
+  }
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  // top: 5px;
+  right: 0;
+  min-width: 10rem;
+  display: none;
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 1rem;
+  li {
+    padding: .5rem !important;
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+  }
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
 }

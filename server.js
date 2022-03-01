@@ -16,10 +16,10 @@ mongoose.connect( process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopolog
 
 const db = mongoose.connection;
 
-server.use( "/booking", require( "./routes/booking.routes" ) );
-
 server.get( "/", async ( req, res ) => {
     res.status( 200 ).json({ besked: "Her er serveren - velkommen til!" })
 })
+
+// ROUTES
 
 server.listen( process.env.PORT, () => console.log( "\{^_^}/ Serveren lytter nu til port: " + process.env.PORT ) )

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Routes, Route } from 'react-router-dom';
 import './Style.scss';
@@ -9,9 +9,11 @@ import Contact from './pages/Contact.jsx';
 import Booking from './pages/Booking.jsx';
 import Admin from './pages/Admin.jsx';
 import Member from './pages/Member.jsx';
+import Test from './pages/Test.jsx';
 import Footer from './components/layout/Footer.jsx';
 
 const App = () => {
+
   return (
     <>
       <Header />
@@ -22,6 +24,7 @@ const App = () => {
           <Route path="/contact" element={ <Contact /> } />
           <Route path="/booking" element={ <Booking /> } />
           <Route path="/member" element={ <Member /> } />
+          <Route path="/test" element={ <Test /> } />
           <Route path="/admin" element={ <Admin /> } />
         </Routes>
       </div>
