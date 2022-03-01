@@ -1,8 +1,8 @@
-GET http://localhost:4000/booking
+GET http://localhost:27017/booking
 
 ###
 
-POST http://localhost:4000/booking
+POST http://localhost:27017/booking
 Content-Type: application/json
 
 {
