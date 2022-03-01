@@ -11,7 +11,7 @@ const api = {
 
 const Booking = () => {
   const location = useLocation()
-  console.log(location)
+  // console.log(location)
   const itemID = location.search.split("=")[1];
 
   const [data, setData] = useState();
@@ -36,18 +36,18 @@ const Booking = () => {
     }, 500);
   }, []);
 
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phonenumber, setPhonenumber] = useState("");
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
-  const [seize, setSeize] = useState("");
-  const [cardnumber, setCardnumber] = useState("");
-  const [carddate, setCarddate] = useState("");
-  const [cardcvc, setCardcvc] = useState("");
+  // const [firstname, setFirstname] = useState("");
+  // const [lastname, setLastname] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phonenumber, setPhonenumber] = useState("");
+  // const [height, setHeight] = useState("");
+  // const [weight, setWeight] = useState("");
+  // const [seize, setSeize] = useState("");
+  // const [cardnumber, setCardnumber] = useState("");
+  // const [carddate, setCarddate] = useState("");
+  // const [cardcvc, setCardcvc] = useState("");
 
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
   // let datasql = await fetch("http://localhost:3000/booking", {
   //   method: "POST",
@@ -67,43 +67,53 @@ const Booking = () => {
 
   // let resJson = datasql.json();
 
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      let response = axios.get( 'http://localhost:3000/booking/', {
-        method: "POST",
-        body: JSON.stringify({
-          category_id: itemID,
-          firstname: firstname,
-          firstname: firstname,
-          lastname: lastname,
-          email: email,
-          phonenumber: phonenumber,
-          height: height,
-          weight: weight,
-          seize: seize,
-          // cardnumber: cardnumber,
-          // carddate: carddate,
-          // cardcvc: cardcvc,
-        }),
-      });
-      // let resJson = response.json();
-      if (response.status === 200) {
-        setFirstname("");
-        setLastname("");
-        setEmail("");
-        setPhonenumber("");
-        setHeight("");
-        setWeight("");
-        setSeize("");
-        setMessage("User created successfully");
-      } else {
-        setMessage("Some error occured"); 
-      }
-    } catch (err) {
-      console.log(err);
-    }
+  // let handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     let response = axios.get( 'http://localhost:3000/booking/', {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         category_id: itemID,
+  //         firstname: firstname,
+  //         firstname: firstname,
+  //         lastname: lastname,
+  //         email: email,
+  //         phonenumber: phonenumber,
+  //         height: height,
+  //         weight: weight,
+  //         seize: seize,
+  //         // cardnumber: cardnumber,
+  //         // carddate: carddate,
+  //         // cardcvc: cardcvc,
+  //       }),
+  //     });
+  //     // let resJson = response.json();
+  //     if (response.status === 200) {
+  //       setFirstname("");
+  //       setLastname("");
+  //       setEmail("");
+  //       setPhonenumber("");
+  //       setHeight("");
+  //       setWeight("");
+  //       setSeize("");
+  //       setMessage("User created successfully");
+  //     } else {
+  //       setMessage("Some error occured"); 
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  const [values, setValues] = useState({
+    category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
+  });
+  const set = firstname => {
+    console.log(firstname)
+    // return ({ target: { value } }) => {
+    //   setValues(oldValues => ({...oldValues, [firstname]: value }));
+    // }
   };
+    // category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
 
   return (
     <section className="booking-page">
@@ -175,7 +185,7 @@ const Booking = () => {
               { location.search == '?cart=' + data[item]._id && 
               <>
               <div className="col-12">
-                <form className="row" onSubmit={handleSubmit}>
+                <form className="row">
                   <div className="col-12" key={data[item]._id}>
                     <nav aria-label="breadcrumb">
                       <ol className="breadcrumb">
@@ -192,17 +202,17 @@ const Booking = () => {
                         <div className="col-12 my-1">
                           <h3 className="m-0 fw-bold">Betaling for { data[item].title }</h3>
                         </div>
-                        {message ? 
+                        {/* {message ? 
                         <>
                           <div className="col-12 my-1">
                             <div className="alert alert-danger">{message}</div>
                           </div>
-                        </> : null}
+                        </> : null} */}
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Fornavn:</label>
-                          <input value={firstname} onChange={(e) => setFirstname(e.target.value)} type="text" className="form-control" placeholder="Fornavn..." />
+                          <input value={values.firstname} onChange={set('firstname')} type="text" className="form-control" placeholder="Fornavn..." />
                         </div>
-                        <div className="col-lg-6 my-1">
+                        {/* <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Efternavn:</label>
                           <input value={lastname} onChange={(e) => setLastname(e.target.value)} type="text" className="form-control" placeholder="Efternavn..." />
                         </div>
@@ -240,7 +250,7 @@ const Booking = () => {
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">CVC:</label>
                           <input value={cardcvc} onChange={(e) => setCardcvc(e.target.value)} type="text" className="form-control" placeholder="CVC..." />
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
