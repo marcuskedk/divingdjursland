@@ -12,36 +12,42 @@ const Home = () => {
     return (
         <>
             <Slider />
-            <section>
+            <section className="home-page">
                 <div className="container">
-                    <div className="row">
+                    <div className="row g-4">
                         <div className="col-md-4">
                             <a className="card" href="/">
-                                <h3>Strand Klit <span><FontAwesomeIcon icon={faArrowAltCircleRight} /></span></h3>
+                                <h3 className="card-header">Strand Klit <span><FontAwesomeIcon icon={faArrowAltCircleRight} /></span></h3>
                                 <img src="../img/IMG_20190726_122436_1.jpg" width="100%" alt="" />
                             </a>
                         </div>
                         <div className="col-md-4">
                             <a className="card" href="/">
-                                <h3>Strand Klit <span><FontAwesomeIcon icon={faArrowAltCircleRight} /></span></h3>
+                                <h3 className="card-header">Strand Klit <span><FontAwesomeIcon icon={faArrowAltCircleRight} /></span></h3>
                                 <img src="../img/IMG_20190726_122436_1.jpg" width="100%" alt="" />
                             </a>
                         </div>
                         <div className="col-md-4">
                             <a className="card" href="/">
-                                <h3>Strand Klit <span><FontAwesomeIcon icon={faArrowAltCircleRight} /></span></h3>
+                                <h3 className="card-header">Strand Klit <span><FontAwesomeIcon icon={faArrowAltCircleRight} /></span></h3>
                                 <img src="../img/IMG_20190726_122436_1.jpg" width="100%" alt="" />
                             </a>
                         </div>
-                    </div>
-                    <div className="row secTwo">
-                        <div className="col-md-6">
-                            <h3>{t('MainText.title')}</h3>
-                            <p>{t('MainText.text1')}</p>
-                            <p>{t('MainText.text2')}</p>
-                        </div>
-                        <div className="col-md-6">
-                            <video className="vid" width="100%" autoPlay="autoplay" loop="loop" muted ><source src="../img/Henning_dykker_cuttet.mp4" type="video/mp4"/></video>
+                        <div className="col-12">
+                            <div className="card">
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <div className="card-body">
+                                            <h3 className="m-0">{t('MainText.title')}</h3>
+                                            <p>{t('MainText.text1')}</p>
+                                            <p>{t('MainText.text2')}</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <video className="vid" width="100%" autoPlay="autoplay" loop="loop" muted ><source src="../img/Henning_dykker_cuttet.mp4" type="video/mp4"/></video>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

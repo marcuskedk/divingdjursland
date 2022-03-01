@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getHome } from '../helpers/Request';
+import { getBooking } from '../helpers/Request';
 
 const Test = () => {
 
@@ -12,7 +12,7 @@ const Test = () => {
         setLoading(true);
 
         // setTimeout(() => {
-            getHome().then( data => {
+            getBooking().then( data => {
                 if ( data ) {
                     console.log(data);
                     setService(data);

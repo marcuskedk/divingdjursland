@@ -9,7 +9,6 @@ import Contact from './pages/Contact.jsx';
 import Booking from './pages/Booking.jsx';
 import Admin from './pages/Admin.jsx';
 import Member from './pages/Member.jsx';
-import Test from './pages/Test.jsx';
 import Footer from './components/layout/Footer.jsx';
 
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="/contact" element={ <Contact /> } />
           <Route path="/booking" element={ <Booking /> } />
           <Route path="/member" element={ <Member /> } />
-          <Route path="/test" element={ <Test /> } />
           <Route path="/admin" element={ <Admin /> } />
         </Routes>
       </div>

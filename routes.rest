@@ -1,8 +1,8 @@
-GET http://localhost:27017/booking
+GET http://localhost:3000/booking
 
 ###
 
-POST http://localhost:27017/booking
+POST http://localhost:3000/booking
 Content-Type: application/json
 
 {
@@ -16,4 +16,28 @@ Content-Type: application/json
     "seize": "48",
     "status": "0",
     "created_at": "22/01/2022"
+}
+
+###
+
+GET http://localhost:3000/category
+
+###
+
+POST http://localhost:3000/category
+Content-Type: application/json
+
+{
+    "title": "Open Water Referral",
+    "description": "Referral kurser afholdes Mandag til onsdag ",
+    "position": "",
+    "adress": "",
+    "time": "Mandag kl. 17-21",
+    "price": "1.995,00",
+    "amount": "2",
+    "max_amount": "10",
+    "place": "Greve - Mosede Havn",
+    "type": "Båd",
+    "depth": "0-6 meter",
+    "img": "img1.png"
 }

@@ -112,43 +112,53 @@ section {
     img {
       box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
     }
-
-    h3 {
-      background-color: $navy;
-      padding: 0.5em;
-      color: $white;
-      margin: 0;
-    }
     span {
       float: right;
     }
   }
 
-  .card:hover {
-    h3 {
-      transition: linear 0.5s;
-      color: $orange;
-    }
+}
+
+.card {
+  display: block;
+  box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
+  .card-body {
+    padding: 1rem;
   }
-
-  .secTwo {
-    margin-top: 2em;
-    padding: 1em;
-    box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
-
-    .vid {
-      box-shadow: 5px 5px 5px rgba(29, 28, 28, 0.267);
-      border-radius: 0.2em;
-    }
-
-    h3 {
-      font-size: 2vw;
-      margin: 0;
-    }
-    p {
-      font-weight: 500;
-    }
+  .card-header {
+    background-color: $navy;
+    padding: 0.5em;
+    color: $white;
+    margin: 0;
   }
+}
+
+.card:hover {
+  .card-header {
+    transition: linear 0.5s;
+    color: $orange;
+  }
+}
+
+.home-page {
+  // .secTwo {
+  //   margin-top: 2em;
+  //   padding: 1em;
+  //   box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
+
+  //   .vid {
+  //     box-shadow: 5px 5px 5px rgba(29, 28, 28, 0.267);
+  //     border-radius: 0.2em;
+  //   }
+
+  //   h3 {
+  //     font-size: 2vw;
+  //     margin: 0;
+  //   }
+  //   p {
+  //     font-weight: 500;
+  //   }
+  // }
 }
 
 footer {
@@ -225,7 +235,7 @@ textarea {
   background-color: green;
 }
 
-.info {
+.info-page {
   .info_menu {
     box-shadow: 0px 0px 15px rgba(29, 28, 28, 0.267);
     display: grid;

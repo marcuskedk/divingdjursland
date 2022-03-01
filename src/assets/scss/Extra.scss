@@ -404,6 +404,30 @@
 
 }
 
+.m-0 {
+  margin: 0;
+}
+
+.float-end {
+  float: right;
+}
+
+.float-start {
+  float: left;
+}
+
+.text-end {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: left;
+}
+
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
@@ -480,28 +504,64 @@
 
 }
 
-.gap-0 {
-  gap: 0 !important;
+.g-0,
+.gx-0 {
+  --bs-gutter-x: 0;
 }
 
-.gap-1 {
-  gap: 0.25rem !important;
+.g-0,
+.gy-0 {
+  --bs-gutter-y: 0;
 }
 
-.gap-2 {
-  gap: 0.5rem !important;
+.g-1,
+.gx-1 {
+  --bs-gutter-x: 0.25rem;
 }
 
-.gap-3 {
-  gap: 1rem !important;
+.g-1,
+.gy-1 {
+  --bs-gutter-y: 0.25rem;
 }
 
-.gap-4 {
-  gap: 1.5rem !important;
+.g-2,
+.gx-2 {
+  --bs-gutter-x: 0.5rem;
 }
 
-.gap-5 {
-  gap: 3rem !important;
+.g-2,
+.gy-2 {
+  --bs-gutter-y: 0.5rem;
+}
+
+.g-3,
+.gx-3 {
+  --bs-gutter-x: 1rem;
+}
+
+.g-3,
+.gy-3 {
+  --bs-gutter-y: 1rem;
+}
+
+.g-4,
+.gx-4 {
+  --bs-gutter-x: 1.5rem;
+}
+
+.g-4,
+.gy-4 {
+  --bs-gutter-y: 1.5rem;
+}
+
+.g-5,
+.gx-5 {
+  --bs-gutter-x: 3rem;
+}
+
+.g-5,
+.gy-5 {
+  --bs-gutter-y: 3rem;
 }
 
 

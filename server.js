@@ -27,4 +27,7 @@ server.get( "/", async ( req, res ) => {
 const BookingRoutes = require('./routes/booking.routes');
 server.use('/', BookingRoutes)
 
+const BookingCategoryRoutes = require('./routes/bookingCategory.routes');
+server.use('/', BookingCategoryRoutes)
+
 server.listen( process.env.DB_PORT, () => console.log( "\{^_^}/ Serveren lytter nu til port: " + process.env.DB_PORT ) )
