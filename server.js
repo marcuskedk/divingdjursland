@@ -1,11 +1,14 @@
 const express = require( 'express' );
 const mongoose = require( 'mongoose' );
 require( 'dotenv' ).config();
+const cors = require('cors')
 
 const server = express();
 
 server.use( express.json() );
 server.use( express.urlencoded() );
+
+server.use(cors())
 
 server.use( express.static( 'public' ) );
 
@@ -21,5 +24,7 @@ server.get( "/", async ( req, res ) => {
 })
 
 // ROUTES
+const BookingRoutes = require('./routes/booking.routes');
+server.use('/', BookingRoutes)
 
 server.listen( process.env.PORT, () => console.log( "\{^_^}/ Serveren lytter nu til port: " + process.env.PORT ) )

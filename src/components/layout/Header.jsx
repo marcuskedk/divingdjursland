@@ -27,7 +27,7 @@ const Header = () => {
     const { t } = useTranslation()
   
     useEffect(() => {
-      document.body.dir = currentLanguage.dir || 'da'
+      document.body.dir = currentLanguage.dir || 'ltr'
       document.title = t('app_title')
     }, [currentLanguage, t])
     
@@ -84,7 +84,7 @@ const Header = () => {
                         <ul className="left-menu">
                             {navi.navigation.map(( item, index ) => 
                                 <li key={ navi.navigation[index].id }>
-                                    <NavLink activeClassName="active" to={ navi.navigation[index].link }>{ navi.navigation[index].title }</NavLink>
+                                    <NavLink activeclassname="active" to={ navi.navigation[index].link }>{ navi.navigation[index].title }</NavLink>
                                 </li>
                             )}
                         </ul>

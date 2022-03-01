@@ -18,7 +18,7 @@
     },
     "footer": {
         "id": 1,
-        "title": "Copyright 2019-2022 © | Alle rettigheder forbeholdes",
+        "title": "Copyright 2019-2022 © | All rights reserved",
         "undertitle": "Diving Djursland"
     },
     "praktisk": [
@@ -81,14 +81,14 @@
             "title": "Equipment",
             "text1": "All our equipment is up to date and we won't rent equipment we don't use ourself.",
             "text2": "Our complet set of equipment consists 6/10 mm wetsuit, a wing with a weight pocket, a 12 liter oxygen tank, a regulator set, 6 mm shoes, 5 mm gloves, fins and a mask",
-            "text3": "Vil du heller dykke med en BCD, en støre eller mindre flaske så spørg endelig. ",
+            "text3": "If you want to dive with BCD, a bigger or smaller tank, just ask!",
             "text4": "",
             "link": "redirect7"
         },
         {
             "id": 8,
-            "title": "Udlejning af udstyr   ",
-            "text1": "Der er altid udstyrsleje med i prisen på vires ture men har vi ikke lige en dato der passer så er det også muligt at komme forbi vores adresse og leje et komplet sæt udstyr og så tage af sted på egen hånd. Prisen for et komplet sæt er 350kr. og 250kr. for en scuba enhed. Det er muligt at leje en ekstra tank for 100kr.  ",
+            "title": "Rent equipment",
+            "text1": "Equipment are included when you book on of our trip, but you can also come by our adress and rent a complete diving set, if you want to dive on your own. The prices for a complete set is  350-, DKR or 250,- DKR for a scuba unit. It's possible to rent an extra oxygen tank for 100,- DKR",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -96,8 +96,8 @@
         },
         {
             "id": 9,
-            "title": "Betaling  ",
-            "text1": "Betaling kan ske via MobilePay på 56 30 30 eller på linket til vores Web Shop som du finder her: Betaling via Web Shop.  ",
+            "title": "Payment",
+            "text1": "You can pay with MobilePay buy sending to 563030 or click on the link to our webshop and pay there: Pay by Web Shop.  ",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -105,8 +105,8 @@
         },
         {
             "id": 10,
-            "title": "Grill  ",
-            "text1": "På nogle af vores ture er der grill efterfølgende. Prisen vil på sådan en tur være 25 kr. højre for at dække dette. Der er ikke drikkevarer med i prisen.  ",
+            "title": "BBQ",
+            "text1": "On some of our trips we have a BBQ after diving. The price is 25,- DKR extra. Drinks are not included",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -114,8 +114,8 @@
         },
         {
             "id": 11,
-            "title": "Andre spørgsmål  ",
-            "text1": "Skulle du have yderlige spørgsmål er du meget velkommen til at kontakte os på sms/telefon +45 42 78 96 05 eller e-mail: contact@scubafun.dk.  ",
+            "title": "TOther questions",
+            "text1": " If you have any further questions, please reach out to us. Send an E-mail to contact@scubafun.dk or you can call us or text us os on  +45 42 78 96 05 ",
             "text2": "",
             "text3": "",
             "text4": "",

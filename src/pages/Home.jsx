@@ -41,7 +41,7 @@ const Home = () => {
                             <p>{t('MainText.text2')}</p>
                         </div>
                         <div className="col-md-6">
-                            <video className="vid" width="100%" autoplay="autoplay" loop="true" muted ><source src="../img/Henning_dykker_cuttet.mp4" type="video/mp4"/></video>
+                            <video className="vid" width="100%" autoPlay="autoplay" loop="loop" muted ><source src="../img/Henning_dykker_cuttet.mp4" type="video/mp4"/></video>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,19 @@
+GET http://localhost:4000/booking
+
+###
+
+POST http://localhost:4000/booking
+Content-Type: application/json
+
+{
+    "category_id": "1",
+    "firstname": "Marcus",
+    "lastname": "Eriksen",
+    "email": "mke@mke.dk",
+    "phonenumber": "22334455",
+    "height": "1.80",
+    "weight": "70",
+    "seize": "48",
+    "status": "0",
+    "created_at": "22/01/2022"
+}

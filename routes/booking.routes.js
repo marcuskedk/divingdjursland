@@ -1,15 +1,16 @@
 const express = require( 'express' );
 const router = express.Router();
-const db = require( '../src/data/db.json' );
 const Booking = require( '../model/booking.model' );
 
 // GET
-router.get( "/", async ( req, res) => {
+router.get( "/booking", async ( req, res) => {
     
     console.log( "GET Booking" );
 
     try {
-        res.status( 200 ).json( { divingdjursland: db } )
+        // res.status( 200 ).json( { divingdjursland: db } )
+        const booking = await Booking.find()
+        res.json(booking)
     } catch ( error ) {
         res.status( 500 ).json( { besked: "Der er opstået en fejl!" } )
     }
@@ -17,7 +18,7 @@ router.get( "/", async ( req, res) => {
 } )
 
 // POST
-router.post( "/", async ( req, res) => {
+router.post( "/booking", async ( req, res) => {
     
     console.log( "POST Booking" );
 
