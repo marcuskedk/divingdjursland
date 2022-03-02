@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 import { useHistory ,useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +12,7 @@ const api = {
 
 const Booking = () => {
   const location = useLocation()
-  console.log(location)
+  // console.log(location)
   const itemID = location.search.split("=")[1];
 
   const [data, setData] = useState();
@@ -36,18 +37,18 @@ const Booking = () => {
     }, 500);
   }, []);
 
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phonenumber, setPhonenumber] = useState("");
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
-  const [seize, setSeize] = useState("");
-  const [cardnumber, setCardnumber] = useState("");
-  const [carddate, setCarddate] = useState("");
-  const [cardcvc, setCardcvc] = useState("");
+  // const [firstname, setFirstname] = useState("");
+  // const [lastname, setLastname] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phonenumber, setPhonenumber] = useState("");
+  // const [height, setHeight] = useState("");
+  // const [weight, setWeight] = useState("");
+  // const [seize, setSeize] = useState("");
+  // const [cardnumber, setCardnumber] = useState("");
+  // const [carddate, setCarddate] = useState("");
+  // const [cardcvc, setCardcvc] = useState("");
 
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
   // let datasql = await fetch("http://localhost:3000/booking", {
   //   method: "POST",
@@ -67,14 +68,67 @@ const Booking = () => {
 
   // let resJson = datasql.json();
 
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      let response = axios.get( 'http://localhost:3000/booking/', {
-        method: "POST",
-        body: JSON.stringify({
+  // let handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     let response = axios.get( 'http://localhost:3000/booking/', {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         category_id: itemID,
+  //         firstname: firstname,
+  //         firstname: firstname,
+  //         lastname: lastname,
+  //         email: email,
+  //         phonenumber: phonenumber,
+  //         height: height,
+  //         weight: weight,
+  //         seize: seize,
+  //         // cardnumber: cardnumber,
+  //         // carddate: carddate,
+  //         // cardcvc: cardcvc,
+  //       }),
+  //     });
+  //     // let resJson = response.json();
+  //     if (response.status === 200) {
+  //       setFirstname("");
+  //       setLastname("");
+  //       setEmail("");
+  //       setPhonenumber("");
+  //       setHeight("");
+  //       setWeight("");
+  //       setSeize("");
+  //       setMessage("User created successfully");
+  //     } else {
+  //       setMessage("Some error occured"); 
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  const dateNow = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+  const convertDate = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [seize, setSeize] = useState("");
+
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const url = 'http://localhost:3000/booking'
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(
+        { 
           category_id: itemID,
-          firstname: firstname,
           firstname: firstname,
           lastname: lastname,
           email: email,
@@ -82,28 +136,25 @@ const Booking = () => {
           height: height,
           weight: weight,
           seize: seize,
-          // cardnumber: cardnumber,
-          // carddate: carddate,
-          // cardcvc: cardcvc,
-        }),
-      });
-      // let resJson = response.json();
-      if (response.status === 200) {
-        setFirstname("");
-        setLastname("");
-        setEmail("");
-        setPhonenumber("");
-        setHeight("");
-        setWeight("");
-        setSeize("");
-        setMessage("User created successfully");
-      } else {
-        setMessage("Some error occured"); 
-      }
-    } catch (err) {
-      console.log(err);
-    }
+          "status": "0",
+          "created_at": dateNow.toLocaleDateString('da-DK', convertDate)
+        }
+      )
+    };
+    fetch(url, requestOptions)
+      .then(response => setMessage("Tak for din tilmeldelse, vi kigger på den hurtigst muligt.") )
+      .catch(error => setMessage("Der opstod en fejl!"))
   };
+
+  // console.log(watch("hej"));
+
+  // const [values, setValues] = useState({
+  //   category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
+  // });
+  
+  
+
+    // category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
 
   return (
     <section className="booking-page">
@@ -195,7 +246,7 @@ const Booking = () => {
                         {message ? 
                         <>
                           <div className="col-12 my-1">
-                            <div className="alert alert-danger">{message}</div>
+                            <div className="alert alert-info">{message}</div>
                           </div>
                         </> : null}
                         <div className="col-lg-6 my-1">
@@ -212,34 +263,34 @@ const Booking = () => {
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Tlf:</label>
-                          <input value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} type="text" className="form-control" placeholder="Tlf..." />
+                          <input value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} type="number" className="form-control" placeholder="Tlf..." />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Højde:</label>
-                          <input value={height} onChange={(e) => setHeight(e.target.value)} type="text" className="form-control" placeholder="Højde..." />
+                          <input value={height} onChange={(e) => setHeight(e.target.value)} type="number" className="form-control" placeholder="Højde..." />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Vægt:</label>
-                          <input value={weight} onChange={(e) => setWeight(e.target.value)} type="text" className="form-control" placeholder="Vægt..." />
+                          <input value={weight} onChange={(e) => setWeight(e.target.value)} type="number" className="form-control" placeholder="Vægt..." />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Skostørrelse:</label>
-                          <input value={seize} onChange={(e) => setSeize(e.target.value)} type="text" className="form-control" placeholder="Skostørrelse..." />
+                          <input value={seize} onChange={(e) => setSeize(e.target.value)} type="number" className="form-control" placeholder="Skostørrelse..." />
                         </div>
                         <div className="col-12">
                           <hr className="my-3" />
                         </div>
                         <div className="col-12 my-1">
                           <label htmlFor="" className="d-block my-1">Kortnummer:</label>
-                          <input value={cardnumber} onChange={(e) => setCardnumber(e.target.value)} type="number" className="form-control" placeholder="Kortnummer..." />
+                          <input type="number" className="form-control" placeholder="Kortnummer..." />
                         </div>
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Udløber (mm/åå):</label>
-                          <input value={carddate} onChange={(e) => setCarddate(e.target.value)} type="text" className="form-control" placeholder="Udløber (mm/åå)..." />
+                          <input type="text" className="form-control" placeholder="Udløber (mm/åå)..." />
                         </div>
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">CVC:</label>
-                          <input value={cardcvc} onChange={(e) => setCardcvc(e.target.value)} type="text" className="form-control" placeholder="CVC..." />
+                          <input type="pasword" className="form-control" placeholder="CVC..." />
                         </div>
                       </div>
                     </div>
