@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 import { useHistory ,useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -104,15 +105,55 @@ const Booking = () => {
   //     console.log(err);
   //   }
   // };
-  const [values, setValues] = useState({
-    category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
-  });
-  const set = firstname => {
-    console.log(firstname)
-    // return ({ target: { value } }) => {
-    //   setValues(oldValues => ({...oldValues, [firstname]: value }));
-    // }
+
+  const dateNow = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+  const convertDate = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [seize, setSeize] = useState("");
+
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    const url = 'http://localhost:3000/booking'
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(
+        { 
+          category_id: itemID,
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          phonenumber: phonenumber,
+          height: height,
+          weight: weight,
+          seize: seize,
+          "status": "0",
+          "created_at": dateNow.toLocaleDateString('da-DK', convertDate)
+        }
+      )
+    };
+    fetch(url, requestOptions)
+      .then(response => setMessage("Tak for din tilmeldelse, vi kigger på den hurtigst muligt.") )
+      .catch(error => setMessage("Der opstod en fejl!"))
   };
+
+  // console.log(watch("hej"));
+
+  // const [values, setValues] = useState({
+  //   category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
+  // });
+  
+  
+
     // category_id: '', firstname: '', lastname: '', email: '', phonenumber: '', height: '', weight: '', seize: ''
 
   return (
@@ -185,7 +226,7 @@ const Booking = () => {
               { location.search == '?cart=' + data[item]._id && 
               <>
               <div className="col-12">
-                <form className="row">
+                <form className="row" onSubmit={handleSubmit}>
                   <div className="col-12" key={data[item]._id}>
                     <nav aria-label="breadcrumb">
                       <ol className="breadcrumb">
@@ -202,17 +243,17 @@ const Booking = () => {
                         <div className="col-12 my-1">
                           <h3 className="m-0 fw-bold">Betaling for { data[item].title }</h3>
                         </div>
-                        {/* {message ? 
+                        {message ? 
                         <>
                           <div className="col-12 my-1">
-                            <div className="alert alert-danger">{message}</div>
+                            <div className="alert alert-info">{message}</div>
                           </div>
-                        </> : null} */}
+                        </> : null}
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Fornavn:</label>
-                          <input value={values.firstname} onChange={set('firstname')} type="text" className="form-control" placeholder="Fornavn..." />
+                          <input value={firstname} onChange={(e) => setFirstname(e.target.value)} type="text" className="form-control" placeholder="Fornavn..." />
                         </div>
-                        {/* <div className="col-lg-6 my-1">
+                        <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Efternavn:</label>
                           <input value={lastname} onChange={(e) => setLastname(e.target.value)} type="text" className="form-control" placeholder="Efternavn..." />
                         </div>
@@ -222,35 +263,35 @@ const Booking = () => {
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Tlf:</label>
-                          <input value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} type="text" className="form-control" placeholder="Tlf..." />
+                          <input value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} type="number" className="form-control" placeholder="Tlf..." />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Højde:</label>
-                          <input value={height} onChange={(e) => setHeight(e.target.value)} type="text" className="form-control" placeholder="Højde..." />
+                          <input value={height} onChange={(e) => setHeight(e.target.value)} type="number" className="form-control" placeholder="Højde..." />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Vægt:</label>
-                          <input value={weight} onChange={(e) => setWeight(e.target.value)} type="text" className="form-control" placeholder="Vægt..." />
+                          <input value={weight} onChange={(e) => setWeight(e.target.value)} type="number" className="form-control" placeholder="Vægt..." />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Skostørrelse:</label>
-                          <input value={seize} onChange={(e) => setSeize(e.target.value)} type="text" className="form-control" placeholder="Skostørrelse..." />
+                          <input value={seize} onChange={(e) => setSeize(e.target.value)} type="number" className="form-control" placeholder="Skostørrelse..." />
                         </div>
                         <div className="col-12">
                           <hr className="my-3" />
                         </div>
                         <div className="col-12 my-1">
                           <label htmlFor="" className="d-block my-1">Kortnummer:</label>
-                          <input value={cardnumber} onChange={(e) => setCardnumber(e.target.value)} type="number" className="form-control" placeholder="Kortnummer..." />
+                          <input type="number" className="form-control" placeholder="Kortnummer..." />
                         </div>
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Udløber (mm/åå):</label>
-                          <input value={carddate} onChange={(e) => setCarddate(e.target.value)} type="text" className="form-control" placeholder="Udløber (mm/åå)..." />
+                          <input type="text" className="form-control" placeholder="Udløber (mm/åå)..." />
                         </div>
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">CVC:</label>
-                          <input value={cardcvc} onChange={(e) => setCardcvc(e.target.value)} type="text" className="form-control" placeholder="CVC..." />
-                        </div> */}
+                          <input type="pasword" className="form-control" placeholder="CVC..." />
+                        </div>
                       </div>
                     </div>
                   </div>
