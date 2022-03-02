@@ -2,6 +2,10 @@ const mongoose = require( 'mongoose' );
 
 const bookingSchema = new mongoose.Schema( {
 
+    _id: {
+        type: String,
+        required: true
+    },
     category_id: {
         type: String,
         required: true

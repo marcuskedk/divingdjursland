@@ -251,31 +251,31 @@ const Booking = () => {
                         </> : null}
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Fornavn:</label>
-                          <input value={firstname} onChange={(e) => setFirstname(e.target.value)} type="text" className="form-control" placeholder="Fornavn..." />
+                          <input value={firstname} onChange={(e) => setFirstname(e.target.value)} type="text" className="form-control" placeholder="Fornavn..." required />
                         </div>
                         <div className="col-lg-6 my-1">
                           <label htmlFor="" className="d-block my-1">Efternavn:</label>
-                          <input value={lastname} onChange={(e) => setLastname(e.target.value)} type="text" className="form-control" placeholder="Efternavn..." />
+                          <input value={lastname} onChange={(e) => setLastname(e.target.value)} type="text" className="form-control" placeholder="Efternavn..." required />
                         </div>
                         <div className="col-lg-8 my-1">
                           <label htmlFor="" className="d-block my-1">Email:</label>
-                          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" placeholder="Email..." />
+                          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" placeholder="Email..." required />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Tlf:</label>
-                          <input value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} type="number" className="form-control" placeholder="Tlf..." />
+                          <input value={phonenumber} onChange={(e) => setPhonenumber(e.target.value)} type="number" className="form-control" placeholder="Tlf..." required />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Højde:</label>
-                          <input value={height} onChange={(e) => setHeight(e.target.value)} type="number" className="form-control" placeholder="Højde..." />
+                          <input value={height} onChange={(e) => setHeight(e.target.value)} type="number" className="form-control" placeholder="Højde..." required />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Vægt:</label>
-                          <input value={weight} onChange={(e) => setWeight(e.target.value)} type="number" className="form-control" placeholder="Vægt..." />
+                          <input value={weight} onChange={(e) => setWeight(e.target.value)} type="number" className="form-control" placeholder="Vægt..." required />
                         </div>
                         <div className="col-lg-4 my-1">
                           <label htmlFor="" className="d-block my-1">Skostørrelse:</label>
-                          <input value={seize} onChange={(e) => setSeize(e.target.value)} type="number" className="form-control" placeholder="Skostørrelse..." />
+                          <input value={seize} onChange={(e) => setSeize(e.target.value)} type="number" className="form-control" placeholder="Skostørrelse..." required />
                         </div>
                         <div className="col-12">
                           <hr className="my-3" />
@@ -299,7 +299,7 @@ const Booking = () => {
                     <div className="card">
                       <div className="card-body">
                         <p className="text-center fs-5 text-success fw-bold">{ data[item].price }</p>
-                        <button type="submit" className="button button-success d-block text-center fw-bold">BETAL</button>
+                        <button type="submit" className="button button-success d-block text-center fw-bold w-100">BETAL</button>
                       </div>
                     </div>
                   </div>
@@ -320,42 +320,6 @@ const Booking = () => {
             </>
           ))}
         </div>
-
-        {/* <a href="/"></a>
-        <div className="tour_card">
-          <div className="tour_img">
-            <h3 className="tour_headline">
-              Strandklit{" "}
-              <span>
-                <FontAwesomeIcon icon={faArrowAltCircleRight} />
-              </span>
-            </h3>
-            <img src="../img/IMG_20190726_122436_1.jpg" alt="" />
-          </div>
-
-          <div className="tour_info">
-            <p>Båddyk</p>
-            <p>Sted</p>
-            <p>Båddyk</p>
-            <p>pris</p>
-            <p>Ledigepladser</p>
-          </div>
-        </div>
-
-        <a href="/"></a>
-        <div className="tour_card">
-          <div className="tour_img">
-            <h3 className="tour_headline">
-              Strandklit{" "}
-              <span>
-                <FontAwesomeIcon icon={faArrowAltCircleRight} />
-              </span>
-            </h3>
-            <img src="../img/IMG_20190806_152625_1.jpg" alt="" />
-          </div>
-
-          <div className="tour_info"></div>
-        </div> */}
       </div>
     </section>
   );

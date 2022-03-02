@@ -3,7 +3,7 @@
         {
             "id": 1,
             "link": "/",
-            "title": "Home"
+            "title": "Forside"
         },
         {
             "id": 2,
@@ -13,12 +13,12 @@
         {
             "id": 3,
             "link": "/booking",
-            "title": "Booking"
+            "title": "Dykkesteder"
         },
         {
             "id": 4,
             "link": "/contact",
-            "title": "Contact"
+            "title": "Kontakt"
         }
     ]
 }
