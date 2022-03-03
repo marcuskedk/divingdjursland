@@ -5,7 +5,9 @@ import cookies from 'js-cookie'
 import classNames from 'classnames'
 import * as ReactDOM from "react-dom";
 import { Routes, Route, NavLink } from "react-router-dom";
-import navi from "../../helpers/navigation.json";
+import locales from "../../helpers/locales.json";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const languages = [
   {
@@ -82,15 +84,15 @@ const Header = () => {
                 <div className={`bottom`}>
                     <div className="container menu-flex">
                         <ul className="left-menu">
-                            {navi.navigation.map(( item, index ) => 
-                                <li key={ navi.navigation[index].id }>
-                                    <NavLink activeclassname="active" to={ navi.navigation[index].link }>{ navi.navigation[index].title }</NavLink>
+                            {locales.navigation.map(( item, index ) => 
+                                <li key={ locales.navigation[index].id }>
+                                    <NavLink activeclassname="active" to={ locales.navigation[index].link }>{t('navigation.'+index+'.title')}</NavLink>
                                 </li>
                             )}
                         </ul>
                         <ul className="right-menu">
                             <li className={isActive ? 'dropdown': 'dropdown active'}>
-                                <a className="dropdown-link" onClick={toggleClass}>Sprog</a>
+                                <a className="dropdown-link" onClick={toggleClass}>{ currentLanguage.code == "da" ? t('lang.da') : t('lang.en') } <FontAwesomeIcon icon={faChevronDown} /></a>
                                 <ul className="dropdown-menu">
                                     {languages.map(({ code, name, country_code }) => (
                                         <li key={country_code}>

@@ -1,0 +1,191 @@
+{
+    "app_title": "DivingDjursland",
+    "contact": {
+        "id": 1,
+        "title": "",
+        "navn": "ScubaFun",
+        "adresse": "Svinget 2 8570 Trustrup, Lyngby",
+        "mail": "contact@scubafun.dk",
+        "telefon": "+45 42789605",
+        "cvr": "CVR: 40091149",
+        "img": "../../img/IMG_20190806_093712.jpg"
+    },
+    "MainText": {
+        "id": 1,
+        "title": "",
+        "text1": "",
+        "text2": ""
+    },
+    "footer": {
+        "id": 1,
+        "title": "",
+        "undertitle": "Diving Djursland",
+        "contact": [
+            {
+                "id": 1,
+                "title": "",
+                "text": ""
+            },
+            {
+                "id": 2,
+                "text": ""
+            },
+            {
+                "id": 3,
+                "text": ""
+            },
+            {
+                "id": 4,
+                "text": ""
+            },
+            {
+                "id": 5,
+                "text": ""
+            },
+            {
+                "id": 6,
+                "text": ""
+            },
+            {
+                "id": 7,
+                "text": ""
+            },
+            {
+                "id": 8,
+                "text": ""
+            }
+        ]
+    },
+    "informations": {
+        "firstname": "",
+        "lastname": "",
+        "email": "",
+        "phonenumber": "",
+        "heitght": "",
+        "weight": "",
+        "seize": ""
+    },
+    "praktisk": [
+        {
+            "id": 1,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect1"
+        },
+        {
+            "id": 2,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect2"
+        },
+        {
+            "id": 3,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect3"
+        },
+        {
+            "id": 4,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect4"
+        },
+        {
+            "id": 5,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect5"
+        },
+        {
+            "id": 6,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect6"
+        },
+        {
+            "id": 7,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect7"
+        },
+        {
+            "id": 8,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect8"
+        },
+        {
+            "id": 9,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect9"
+        },
+        {
+            "id": 10,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect10"
+        },
+        {
+            "id": 11,
+            "title": "",
+            "text1": "",
+            "text2": "",
+            "text3": "",
+            "text4": "",
+            "link": "redirect11"
+        }
+    ],
+    "navigation": [
+        {
+            "id": 1,
+            "link": "/",
+            "title": ""
+        },
+        {
+            "id": 2,
+            "link": "/info",
+            "title": ""
+        },
+        {
+            "id": 3,
+            "link": "/booking",
+            "title": ""
+        },
+        {
+            "id": 4,
+            "link": "/contact",
+            "title": ""
+        }
+    ]
+}

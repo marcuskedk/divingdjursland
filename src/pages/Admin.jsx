@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useHistory ,useLocation } from 'react-router-dom';
 import { getBookingCategory, getBooking } from "../helpers/Request";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faExclamationCircle, faTimesCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+
+
 import Modal from "./Modal";
 
 const Admin = () => {
@@ -87,6 +89,12 @@ const Admin = () => {
                   </div>
                 </div>
                 <div className="table-responsive">
+                <Modal
+                    moreTxt={allData}
+                    ids={Index}
+                    isOpen={open}
+                    onClose={closeModal}
+                  />
                   <table className="BookingTabel">
                     <thead>
                       <tr className="TableHeadline">
@@ -102,17 +110,17 @@ const Admin = () => {
                           <td>{ allData[id].firstname + " " + allData[id].lastname }</td>
                           <td>{ allData[id].email }</td>
                           <td>{ allData[id].status }</td>
-                          <td> <button type="button" data-index={allData[id]._id} onClick={openModal} className="InfoButton"> Oplysninger</button></td>
+                          <td> 
+                          <button  type="button" className="accept" > <FontAwesomeIcon icon={faCheckCircle} /> </button>
+                          <button  type="button" className="decline" > <FontAwesomeIcon icon={faTimesCircle} /> </button>
+                            <button type="button" data-index={allData[id]._id} onClick={openModal} className="InfoButton"> <FontAwesomeIcon icon={faExclamationCircle} /></button>
+                          
+                          </td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
-                  <Modal
-                    moreTxt={allData}
-                    ids={Index}
-                    isOpen={open}
-                    onClose={closeModal}
-                  />
+              
                 </div>
               </div>
               </>

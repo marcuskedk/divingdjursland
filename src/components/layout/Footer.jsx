@@ -1,40 +1,56 @@
-import * as React from 'react';
+import React from 'react'
 import { useTranslation } from 'react-i18next'
-import * as ReactDOM from 'react-dom';
-import { Routes, Route, Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+import locales from '../../helpers/locales.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleRight, faExclamationCircle,  } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
-    const { t } = useTranslation();
-    return (
-        <>
-            <footer>
-                <div className="top">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-4">
-                                <ul>
-                                </ul>
-                            </div>
-                            <div className="col-md-4">
-                            </div>
-                        </div>
+    const location = useLocation()
+    const { t } = useTranslation()
+
+  return (
+    <footer className='footer'>
+        <div className='container'>
+            <div className='row'>
+                <div className='footer-col'>
+                    <h4>Kategorier</h4>
+                </div>
+               
+               
+                
+                <div className='footer-col'>
+                    <h4>Kontakt</h4>
+                    {locales.footer.contact.map((items, index ) => (
+                        <ul>
+                            {t('footer.contact.' + index + '.text')}
+                        </ul>
+                    ))}
+                </div>
+                <div className='footer-col'>
+                    <h4>Betalingsmuligheder</h4>
+                    <ul>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className='footer-col'>
+                    <h4>Betalingsmuligheder</h4>
+                   
+                
+                    <div className='social-links '>
+                        <a href=""><i className='fab fa-facebook'></i></a>
                     </div>
                 </div>
-                <div className="bottom">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <p>{ t('footer.title') }</p>
-                            </div>
-                            <div className="col-md-6 text-right">
-                                <p>{ t('footer.undertitle') }</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </>
-    )
+                        
+                
+                
+            </div>
+        </div>
+    </footer>
+  )
 }
 
 export default Footer

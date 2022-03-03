@@ -2,10 +2,6 @@ const mongoose = require( 'mongoose' );
 
 const bookingSchema = new mongoose.Schema( {
 
-    _id: {
-        type: String,
-        required: true
-    },
     category_id: {
         type: String,
         required: true
@@ -23,23 +19,23 @@ const bookingSchema = new mongoose.Schema( {
         required: true
     },
     phonenumber: {
-        type: String,
+        type: Number,
         required: true
     },
     height: {
-        type: String,
+        type: Number,
         required: true
     },
     weight: {
-        type: String,
+        type: Number,
         required: true
     },
     seize: {
-        type: String,
+        type: Number,
         required: true
     },
     status: {
-        type: String,
+        type: Number,
         required: true
     },
     created_at: {

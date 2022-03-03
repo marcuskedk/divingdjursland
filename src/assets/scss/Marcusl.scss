@@ -1,22 +1,122 @@
-.BookingTabel{
-  
+.BookingTabel {
   width: 100%;
   font-size: medium;
   background-color: rgb(252, 250, 250);
-  th{
-    box-shadow: 2px 2px 2px rgba(29, 28, 28, 0.267);
+  margin-top: 3em;
+  th {
+    box-shadow: 2px 2px 2px rgba(202, 146, 82, 0.267);
+    color: $orange;
   }
-  td{
-    box-shadow: 2px 2px 2px rgba(29, 28, 28, 0.267);
+  td {
+    box-shadow: 2px 2px 2px rgba(202, 146, 82, 0.267);
     text-align: center;
   }
+}
+
+.form-control{
+  background-color: none;
+}
+
+.InfoButton {
+  
+  color:$navy;
+  background: none;
+  font-size: 2em;
+  border: none;
+
+  :hover{
+    color: $orange;
+    cursor: pointer;
+  }
+  
+  }
+
+  .accept{
+    color:rgba(61, 139, 61, 0.733);
+    background: none;
+    font-size: 2em;
+    border: none;
+    :hover{
+      color: rgb(29, 109, 29);
+      cursor: pointer;
+    }
+  }
+
+  
+  .decline{
+    color:rgba(192, 89, 89, 0.89);
+    background: none;
+    font-size: 2em;
+    border: none;
+    :hover{
+      color:rgb(185, 30, 30);;
+      cursor: pointer;
+    }
+  }
+
+
+ 
+.modal {
+  background-color: white;
+  box-shadow: 5px 10px 8px 10px rgba(153, 152, 150, 0.267);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  
+  
   
 }
 
-.InfoButton{
-  border: none;
-  background-color: $navy;
+.modal-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  box-shadow: 2px 2px 2px rgba(202, 146, 82, 0.267);
+  
+}
+
+.modal-title {
+  grid-column: 1/2;
+
+  padding: 2em;
+  display: grid;
+
   color: $orange;
-  font-size: 1rem;
-  padding: 0.5em;
+  font-size: 1em;
+  box-shadow: 3px 3px 3px rgba(202, 146, 82, 0.267);
+
+  h3 {
+    justify-self: center;
+  }
+}
+
+.modal-text {
+  grid-column: 2/3;
+  padding: 2em;
+  color: rgb(150, 150, 151);
+  font-size: 1.2em;
+
+  display: grid;
+
+
+
+  p {
+    justify-self: center;
+  }
+}
+
+.closeContainer {
+  display: grid;
+  box-shadow: 3px 3px 3px rgba(202, 146, 82, 0.267);
+}
+.icon {
+  justify-self: end;
+  cursor: pointer;
+  color: $orange;
+  font-size: 3rem;
+  padding-right: 1em;
+
+  :hover{
+    color:$navy;
+  }
 }

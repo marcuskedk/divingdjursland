@@ -1,4 +1,4 @@
-@import "Extra", "Variables", "Marcusl";
+@import "Extra", "Variables", "Marcusl", "Dennisstyle", "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome", "../../../node_modules/@fortawesome/fontawesome-free/scss/brands", "../../../node_modules/@fortawesome/fontawesome-free/scss/regular", "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
 * {
   box-sizing: border-box;
@@ -170,7 +170,7 @@ section {
 }
 
 .form-select {
-  background-color: #ececec;
+  
   border: 1px solid rgb(0 0 0 / 23%);
   color: #000;
   border-radius: 5px;
@@ -190,8 +190,38 @@ section {
  font-weight: 500;
 }
 
+.sidebar-closed {
+  .sidebar {
+    width: 80px;
+    transition: all .3s;
+    .close-sidebar {
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .sidebar-title {
+      display: none;
+    }
+    .sidebar-dropdown-item {
+      margin: 0 !important;
+      .sidebar-dropdown-link {
+        text-align: center !important;
+        font-size: 1.5rem;
+      }
+    }
+    .sidebar-link {
+      text-align: center !important;
+    }
+    .sidebar-icon {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
 .sidebar {
   width: 280px;
+  transition: all .3s;
   position: fixed;
   top: 80px;
   left: 0;
@@ -199,6 +229,14 @@ section {
   background-color: rgb(238, 238, 238);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.307);
   z-index: 40000;
+  .close-sidebar {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    svg {
+      cursor: pointer;
+    }
+  }
   .navbar-sidebar {
     display: flex;
     flex-direction: column;
@@ -273,7 +311,8 @@ section {
 }
 
 .adminPanel {
-  padding: 90px 1rem 1rem 290px;
+  position: relative;
+  margin: 90px 1rem 1rem 290px;
 }
 
 
@@ -304,20 +343,9 @@ section {
   header {
     display: none;
   }
-  footer {
-    display: none;
-  }
-}
 
-footer {
-  color: orange;
 
-  a {
-    color: orange;
-    text-decoration: none;
-  }
-
-  background-color: $navy;
+  
   .top {
     padding: 1rem 0;
   }
@@ -459,7 +487,7 @@ textarea {
 }
 
 .form-control {
-   background-color: #ececec;
+   
    border: 1px solid rgb(0 0 0 / 23%);
    color: #000;
    border-radius: 5px;

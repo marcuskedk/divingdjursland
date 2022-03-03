@@ -1,5 +1,9 @@
 {
     "app_title": "DivingDjursland",
+    "lang": {
+        "en": "Engelsk",
+        "da": "Dansk"
+    },
     "contact": {
         "id": 1,
         "title": "Spørgsmål eller kommentarer kan rettes til:",
@@ -18,8 +22,51 @@
     },
     "footer": {
         "id": 1,
-        "title": "Copyright 2019-2022 © | Alle rettigheder forbeholdes",
-        "undertitle": "Diving Djursland"
+    
+        "contact": [
+            {
+                "id": 1,
+                "title": "Kontakt",
+                "text": "Scubafun"
+            },
+            {
+                "id": 2,
+                "text": "Svinget 2"
+            },
+            {
+                "id": 3,
+                "text": "8570 Trustrup"
+            },
+            {
+                "id": 4,
+                "text": "Danmark"
+            },
+            {
+                "id": 5,
+                "text": "CVR-nummer: 40091149"
+            },
+            {
+                "id": 6,
+                "text": "Bankoplysninger: Nordea, Grenaa"
+            },
+            {
+                "id": 7,
+                "text": "Telefonnr.: +4542789605"
+            },
+            {
+                "id": 8,
+                "text": "E-mail: contact@scubafun.dk"
+            }
+        ]
+    },
+    "informations": {
+        "firstname": "Fornavn:",
+        "lastname": "Efternavn:",
+        "email": "Email:",
+        "phonenumber": "Telefonnummer:",
+        "height": "Højde:",
+        "weight": "Vægt:",
+        "seize": "Skostørrelse:"
     },
     "praktisk": [
         {
@@ -126,7 +173,7 @@
         {
             "id": 1,
             "link": "/",
-            "title": "Home"
+            "title": "Forside"
         },
         {
             "id": 2,
@@ -136,12 +183,12 @@
         {
             "id": 3,
             "link": "/booking",
-            "title": "Booking"
+            "title": "Tilmeldning"
         },
         {
             "id": 4,
             "link": "/contact",
-            "title": "Contact"
+            "title": "Kontakt"
         }
     ]
 }

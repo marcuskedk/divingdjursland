@@ -1,5 +1,9 @@
 {
     "app_title": "DivingDjursland",
+    "lang" : {
+        "en": "English",
+        "da": "Danish"
+    },
     "contact": {
         "id": 1,
         "title": "Let us know if you have any questions",
@@ -13,19 +17,63 @@
     "MainText": {
         "id": 1,
         "title": "Our guide",
-        "text1": "When it's comes to diving, Djursland is one of the most unique places you can visit in Denmark. If you are a certified diver, you can join our different diving trips around Djursland",
-        "text2": "If you took your diver C-card recently, our guided diving trips are perfect for getting some more experience. We'll try out different diving areas in Djursland, in all kinds of weather. If you are an experienced diver, but haven't dived in a long time, we suggets you joining our trips for some refreshment."
+        "text1": "When it's comes to diving, Djursland is one of the most unique places you can visit in Denmark. If you are a certified diver, you can join our different diving trips at Djursland",
+        "text2": "If you took a diver C-card recently, our guided diving trips are perfect for getting some more experience. We'll try out different diving areas at Djursland, in all kinds of weather. If you are an experienced diver, but haven't dived in a long time, we suggest that you join our guided trips to begin with. "
     },
     "footer": {
         "id": 1,
         "title": "Copyright 2019-2022 © | Alle rettigheder forbeholdes",
-        "undertitle": "Diving Djursland"
+        "undertitle": "Diving Djursland",
+        "contact": [
+            {
+                "id": 1,
+                "title": "Kontakt",
+                "text": "Scubafun"
+            },
+            {
+                "id": 2,
+                "text": "Svinget 2"
+            },
+            {
+                "id": 3,
+                "text": "8570 Trustrup"
+            },
+            {
+                "id": 4,
+                "text": "Danmark"
+            },
+            {
+                "id": 5,
+                "text": "CVR-nummer: 40091149"
+            },
+            {
+                "id": 6,
+                "text": "Bankoplysninger: Nordea, Grenaa"
+            },
+            {
+                "id": 7,
+                "text": "Telefonnr.: +4542789605"
+            },
+            {
+                "id": 8,
+                "text": "E-mail: contact@scubafun.dk"
+            }
+        ]
+    },
+    "informations": {
+        "firstname": "Firstname:",
+        "lastname": "Lastname:",
+        "email": "Email:",
+        "phonenumber": "Phonenumber:",
+        "height": "Height:",
+        "weight": "Weight:",
+        "seize": "Shoes Seize:"
     },
     "praktisk": [
         {
             "id": 1,
             "title": "Who can join our trips?",
-            "text1": "Everyone with a valid diver C-card, can join us. But, you have to inform our guides if you had a break from diving and need some help getting back on track.",
+            "text1": "Everyone with a valid diver C-card can join us, but you must inform our guides if it’s been a while, and you need some help getting back on track.",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -34,8 +82,8 @@
         {
             "id": 2,
             "title": "What do i need to bring?",
-            "text1": "You have to bring a towel, some food and drinks, your swimwear and a smile on your lips! If you want to bring your own goggles for example, you can of course do that.",
-            "text2": "You can also bring your camera if you want to, but just remember to keep an eye on the rest of the group, so you don't got los",
+            "text1": "You must bring a towel, personal supplies in form of food and drinks, swimwear, and a good attitude. If you want to bring your own goggle, you can of course do that as well.",
+            "text2": "You can also bring a camera for pictures, but just remember to keep an eye on the rest of the group, so you don't get lost",
             "text3": "",
             "text4": "",
             "link": "redirect2"
@@ -43,7 +91,7 @@
         {
             "id": 3,
             "title": "Responsibility",
-            "text1": "All participants are educated divers, which means they are responsable for following the rules as a diver. All participants dives with a mate or a guide. As a certified diver you must have an insurance. Most insurances cover diving, but we recommend Dan europ. Otherwise you can join a diving union, who provides insurances from DSF.",
+            "text1": "One of the most impotent rules is that the participants must never dive alone, but always in company of a mate or a guide. As a certified diver we expect you to have an insurance. Most insurances will cover diving, but we personally recommend Dan europ. Otherwise, you can join a diving union, who provides insurances from DSF.",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -52,7 +100,7 @@
         {
             "id": 4,
             "title": "Diving locations",
-            "text1": "Our guides know the local diving areas well, and have years of experience in diving in Djursland. We have numereous of diving areas we use. You can see some of them places, if you click on (areas/places) in the menu. Because we need to know what wheater we are diving in, we usually choose the diving place the day before, to make sure we have the best possible conditions to dive in. ",
+            "text1": "Our guides know the local diving areas well and have years of experience in diving at Djursland. If you click on (areas/places) in the menu, you can see some of the numerous numbers of exiting diving areas, which we are taking use of. Because we are affected by the weather, we usually choose the diving place the day before, to make sure we have the best possible conditions to dive in. ",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -61,7 +109,7 @@
         {
             "id": 5,
             "title": "Diving guide",
-            "text1": "All our guides are educated diving instructors or Dive Masters and do have a lot of experience and knows where to dive and where to not.",
+            "text1": "All our guides are certified diving instructors or Dive Masters which means that they have a lot of experience and knowledge regarding safety.",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -70,25 +118,25 @@
         {
             "id": 6,
             "title": "Registration",
-            "text1": "There are different ways you can registrate for one of our trips. You can do it here by clicking Registration or you can click on one of our trips under Trips Du kan gøre det her på siden under Tilmelding i menuen eller under hver tur under menupunktet Ture.   ",
-            "text2": "You can call us or send us an E-Mail or text if you have any further questions. You can reach os by: e-mail: contact@scubafun.dk or phone +45 42 78 96 05. ",
-            "text3": "Keep in mind, that your registration is confirmed when you have payed. The registration only, is not enough",
-            "text4": " You can pay with Mobilepay by sending to 503030 or click on the link to our webshop: Pay by webshop",
+            "text1": "There are different ways you can get registered if you are interested in one of our trips. You can do it here by clicking on Registration or you can click on one of our trips under Trips ",
+            "text2": "If you have any questions, you can contact us by call, text or sending us an E-mail.E-mail: contact@scubafun.dk or phone +45 42 78 96 05",
+            "text3": "Keep in mind, that your registration is fully confirmed when we have received your payment.",
+            "text4": "You can pay with Mobilepay by sending to 503030 or click on the link to our webshop: Pay by web shop.",
             "link": "redirect6"
         },
         {
             "id": 7,
             "title": "Equipment",
-            "text1": "All our equipment is up to date and we won't rent equipment we don't use ourself.",
-            "text2": "Our complet set of equipment consists 6/10 mm wetsuit, a wing with a weight pocket, a 12 liter oxygen tank, a regulator set, 6 mm shoes, 5 mm gloves, fins and a mask",
-            "text3": "Vil du heller dykke med en BCD, en støre eller mindre flaske så spørg endelig. ",
+            "text1": "All our equipment’s are up to date, and our guides are using the same as your participants.",
+            "text2": "Our complete set of equipment consists of a 6/10 mm wetsuit, a wing with a weight pocket, a 12-liter oxygen tank, a regulator set, 6 mm shoes, 5 mm gloves, fins, and a mask.",
+            "text3": "If you want to dive with BCD, a bigger or smaller tank, just ask us. ",
             "text4": "",
             "link": "redirect7"
         },
         {
             "id": 8,
-            "title": "Udlejning af udstyr   ",
-            "text1": "Der er altid udstyrsleje med i prisen på vires ture men har vi ikke lige en dato der passer så er det også muligt at komme forbi vores adresse og leje et komplet sæt udstyr og så tage af sted på egen hånd. Prisen for et komplet sæt er 350kr. og 250kr. for en scuba enhed. Det er muligt at leje en ekstra tank for 100kr.  ",
+            "title": "Rent equipment.",
+            "text1": "Equipment is automatically included when you book one of our trips, but you can also swing by our address and rent a complete diving set, if you want to dive on your own. The prices for a complete set is 350-, DKK or 250,- DKK for a scuba unit. It's possible to rent an extra oxygen tank for 100,- DKK",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -96,8 +144,8 @@
         },
         {
             "id": 9,
-            "title": "Betaling  ",
-            "text1": "Betaling kan ske via MobilePay på 56 30 30 eller på linket til vores Web Shop som du finder her: Betaling via Web Shop.  ",
+            "title": "Payment",
+            "text1": "You can pay with MobilePay by sending to 563030 or click on the link to our web shop.",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -105,8 +153,8 @@
         },
         {
             "id": 10,
-            "title": "Grill  ",
-            "text1": "På nogle af vores ture er der grill efterfølgende. Prisen vil på sådan en tur være 25 kr. højre for at dække dette. Der er ikke drikkevarer med i prisen.  ",
+            "title": "BBQ",
+            "text1": "On some of our trips we have arranged a BBQ after diving. The price is 25,- DKR extra. Drinks are not included.",
             "text2": "",
             "text3": "",
             "text4": "",
@@ -114,8 +162,8 @@
         },
         {
             "id": 11,
-            "title": "Andre spørgsmål  ",
-            "text1": "Skulle du have yderlige spørgsmål er du meget velkommen til at kontakte os på sms/telefon +45 42 78 96 05 eller e-mail: contact@scubafun.dk.  ",
+            "title": "Other questions",
+            "text1": "If you have any further questions, please reach out to us. Send an E-mail to contact@scubafun.dk or you can call us or text us on +45 42 78 96 05 ",
             "text2": "",
             "text3": "",
             "text4": "",

@@ -106,7 +106,7 @@ const Booking = () => {
   //   }
   // };
 
-  const dateNow = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+  const dateNow = new Date();
   const convertDate = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
   const [firstname, setFirstname] = useState("");
@@ -119,6 +119,8 @@ const Booking = () => {
 
   const [message, setMessage] = useState("");
 
+  console.log(itemID)
+
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -128,14 +130,14 @@ const Booking = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(
         { 
-          category_id: itemID,
-          firstname: firstname,
-          lastname: lastname,
-          email: email,
-          phonenumber: phonenumber,
-          height: height,
-          weight: weight,
-          seize: seize,
+          "category_id": itemID,
+          "firstname": firstname,
+          "lastname": lastname,
+          "email": email,
+          "phonenumber": phonenumber,
+          "height": height,
+          "weight": weight,
+          "seize": seize,
           "status": "0",
           "created_at": dateNow.toLocaleDateString('da-DK', convertDate)
         }

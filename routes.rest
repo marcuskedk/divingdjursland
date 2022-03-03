@@ -11,7 +11,7 @@ Content-Type: application/json
     "lastname": "Eriksen",
     "email": "mke@mke.dk",
     "phonenumber": "22334455",
-    "height": "1.80",
+    "height": "180",
     "weight": "70",
     "seize": "48",
     "status": "0",
