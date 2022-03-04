@@ -32,12 +32,6 @@ const Sidebar = () => {
     }, []);
   
     const breakpoint = 922;
-  
-    if (dimensions.width < breakpoint) {
-      document.getElementById('root').classList.add('mobileView', 'sidebar-closed')
-    } else {
-      document.getElementById('root').classList.remove('mobileView', 'sidebar-closed')
-    }
 
     const [BookingToggleDropdown, setBookingToggleDropdown] = useState(false)
     const [toggleDropdown, setToggleDropdown] = useState(false)
@@ -61,16 +55,9 @@ const Sidebar = () => {
     }
 
     const [ sidebarActive, setSidebar ] = useState(false)
-    console.log("her 1 ", sidebarActive)
+    // console.log("her 1 ", sidebarActive)
 
-    let bull = true
 
-    if (dimensions.width < breakpoint && sidebarActive == false) {
-        setSidebar(true)
-        bull = false
-    }
-
-    // console.log("her 2 ", sidebarActive)
     const closeSidebar = () => {
         // if (document.querySelector('.mobileView.sidebar-closed')) {
         //     setSidebar(false)
@@ -79,11 +66,11 @@ const Sidebar = () => {
             if (sidebarActive === false) {
                 setSidebar(true)
                 document.getElementById('root').classList.add('sidebar-closed')
-                console.log("her 3 ", sidebarActive)
+                // console.log("her 3 ", sidebarActive)
             } else {
                 setSidebar(false)
                 document.getElementById('root').classList.remove('sidebar-closed')
-                console.log("her 4 ", sidebarActive)
+                // console.log("her 4 ", sidebarActive)
             }
         // }
         console.log(sidebarActive)

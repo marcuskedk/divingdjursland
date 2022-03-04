@@ -283,16 +283,8 @@ const Booking = () => {
                           <hr className="my-3" />
                         </div>
                         <div className="col-12 my-1">
-                          <label htmlFor="" className="d-block my-1">Kortnummer:</label>
-                          <input type="number" className="form-control" placeholder="Kortnummer..." />
-                        </div>
-                        <div className="col-lg-6 my-1">
-                          <label htmlFor="" className="d-block my-1">Udløber (mm/åå):</label>
-                          <input type="text" className="form-control" placeholder="Udløber (mm/åå)..." />
-                        </div>
-                        <div className="col-lg-6 my-1">
-                          <label htmlFor="" className="d-block my-1">CVC:</label>
-                          <input type="pasword" className="form-control" placeholder="CVC..." />
+                          <label htmlFor="" className="d-block my-1">Betalingsmuligheder:</label>
+                          <img src="../img/mobilepay.png" className="payment-logo" alt="" />
                         </div>
                       </div>
                     </div>
