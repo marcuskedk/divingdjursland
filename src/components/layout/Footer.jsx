@@ -15,6 +15,22 @@ const Footer = () => {
             <div className='row'>
                 <div className='footer-col'>
                     <h4>Kategorier</h4>
+                    <ul>
+                        <li>
+                            <a href="">Forside</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Info</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Tilmelding</a>
+                        </li>
+                    </ul> 
+
                 </div>
                
                
@@ -22,26 +38,26 @@ const Footer = () => {
                 <div className='footer-col'>
                     <h4>Kontakt</h4>
                     {locales.footer.contact.map((items, index ) => (
-                        <ul>
-                            {t('footer.contact.' + index + '.text')}
+                        <ul> 
+                            <li>
+                                 {t('footer.contact.' + index + '.text')} 
+                            </li>
                         </ul>
                     ))}
                 </div>
                 <div className='footer-col'>
                     <h4>Betalingsmuligheder</h4>
-                    <ul>
-                        <li>
-                            <a href=""></a>
-                        </li>
-                    </ul>
+                    <div className='payment-logos'>
+                        <a href=""><i className="fa-brands fa-cc-mastercard"></i></a>
+                        <a href=""><i className="fa-brands fa-cc-visa"></i></a>
+                    </div>
                 </div>
 
                 <div className='footer-col'>
-                    <h4>Betalingsmuligheder</h4>
-                   
-                
+                    <h4>Følg med her!</h4>
                     <div className='social-links '>
-                        <a href=""><i className='fab fa-facebook'></i></a>
+                        <a href=""><i className="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i className="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                         
